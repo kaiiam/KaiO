@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/ko
+
+idspace: KO
+base_url: /obo/ko
+
+products:
+- ko.owl: https://raw.githubusercontent.com/kaiiam/master/ko.owl
+- ko.obo: https://raw.githubusercontent.com/kaiiam/master/ko.obo
+
+term_browser: ontobee
+example_terms:
+- KO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/kaiiam/ko/v
+
+- prefix: /tracker/
+  replacement: https://github.com/kaiiam/ko/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/KO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/kaiiam/ko/master/
